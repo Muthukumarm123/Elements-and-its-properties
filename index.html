@@ -2,17 +2,82 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>Element Atlas — Complete 118-Element Chemistry Reference & Elemental Forms Guide</title>
-    <meta name="description" content="A comprehensive reference and learning system for all 118 chemical elements, atomic structures, periodic trends, and monoatomic, diatomic, and polyatomic elemental substances." />
-    <meta property="og:title" content="Element Atlas — Complete 118-Element Reference" />
-    <meta property="og:description" content="Comprehensive reference for all 118 chemical elements, atomic structure, periodic trends, and interactive guide to elemental forms." />
+    <meta
+      name="description"
+      content="A comprehensive reference and learning system for all 118 chemical elements, atomic structures, periodic trends, and monoatomic, diatomic, and polyatomic elemental substances."
+    />
+    <meta
+      name="keywords"
+      content="periodic table, chemical elements, chemistry reference, diatomic elements, diatomic 7, monoatomic noble gases, allotropes, elemental forms, chemical education, atomic structure, chemistry encyclopedia, electron configuration, periodic trends"
+    />
+    <meta name="author" content="Element Atlas" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- OpenGraph / Social Cards -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Element Atlas" />
+    <meta property="og:title" content="Element Atlas — Complete 118-Element Reference & Elemental Forms Guide" />
+    <meta
+      property="og:description"
+      content="Explore all 118 chemical elements in depth: electron configurations, Bohr models, oxidation states, isotopes, periodic trends, and an interactive guide to monoatomic, diatomic, and polyatomic elemental substances."
+    />
+    <meta property="og:image" content="/favicon.svg" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Element Atlas — Complete 118-Element Reference & Elemental Forms Guide" />
+    <meta
+      name="twitter:description"
+      content="Comprehensive chemical element reference and dedicated learning system for monoatomic, diatomic, and polyatomic elemental forms."
+    />
+    <meta name="twitter:image" content="/favicon.svg" />
+
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalApplication",
+      "name": "Element Atlas",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "description": "Comprehensive reference and learning system for all 118 chemical elements, atomic structure, periodic trends, and interactive guide to elemental forms.",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Periodic Table of Elements"
+        },
+        {
+          "@type": "Thing",
+          "name": "Chemistry"
+        },
+        {
+          "@type": "Thing",
+          "name": "Diatomic Molecules"
+        },
+        {
+          "@type": "Thing",
+          "name": "Allotropes"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
   </head>
-  <body>
+  <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Atom,
   Search,
@@ -8,7 +8,8 @@ import {
   BookOpen,
   Menu,
   X,
-  Compass
+  Compass,
+  Share2
 } from 'lucide-react';
 import { MainNavSection } from '../../types/chemistry';
 
@@ -33,6 +34,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onToggleMobileMenu
 }) => {
   const isElementalForms = currentSection === 'elemental-forms';
+  const [copied, setCopied] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 w-full border-b backdrop-blur-md transition-colors bg-white/90 dark:bg-slate-900/90 border-slate-200 dark:border-slate-800">
@@ -119,6 +121,28 @@ export const Navbar: React.FC<NavbarProps> = ({
               <Layers className="w-5 h-5 text-indigo-600 dark:text-cyan-400" />
             ) : (
               <Compass className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            )}
+          </button>
+
+          {/* Share / Copy Link */}
+          <button
+            onClick={() => {
+              if (navigator.clipboard) {
+                navigator.clipboard.writeText(window.location.href);
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+              }
+            }}
+            aria-label="Share Element Atlas link"
+            title="Copy link to share"
+            className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none flex items-center gap-1 text-xs"
+          >
+            {copied ? (
+              <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1 px-1">
+                Copied!
+              </span>
+            ) : (
+              <Share2 className="w-4 h-4" />
             )}
           </button>
 
