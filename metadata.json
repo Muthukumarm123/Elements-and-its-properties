@@ -1,0 +1,6 @@
+{
+  "name": "Element Atlas",
+  "description": "Comprehensive reference for all 118 chemical elements, atomic structure, periodic trends, and interactive guide to monoatomic, diatomic, and polyatomic elemental forms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
